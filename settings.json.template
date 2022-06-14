@@ -714,10 +714,10 @@
     }
   },
 
-  // richlist_page: a collection of settings that pertain to the richlist/top100 page
+  // richlist_page: a collection of settings that pertain to the richlist/top1000 page
   "richlist_page": {
-    // enabled: Enable/disable the richlist/top100 page (true/false)
-    //          If set to false, the richlist/top100 page will be completely inaccessible
+    // enabled: Enable/disable the richlist/top1000 page (true/false)
+    //          If set to false, the richlist/top1000 page will be completely inaccessible
     "enabled": true,
     // show_panels: Determine whether to show the panels configured in the shared_pages.page_header section across the top of this page (true/false)
     "show_panels": false,
@@ -725,7 +725,7 @@
     "show_nethash_chart": false,
     // show_difficulty_chart: Determine whether to show the network difficulty chart configured in the shared_pages.network_charts.difficulty_chart section across the top of this page (true/false)
     "show_difficulty_chart": false,
-    // page_header: a collection of settings that pertain to the richlist/top100 page header
+    // page_header: a collection of settings that pertain to the richlist/top1000 page header
     "page_header": {
       // show_img: Determine whether to show the page title image defined in the "shared_pages.page_header.page_title_image" setting (true/false)
       "show_img": true,
@@ -736,27 +736,27 @@
       // show_description: Determine whether to show the page description as defined in "locale.rl_description" (true/false)
       "show_description": true
     },
-    // show_current_balance: Determine whether to show the top 100 list of wallet addresses that currently have the most coins in a single wallet (true/false)
+    // show_current_balance: Determine whether to show the top 1000 list of wallet addresses that currently have the most coins in a single wallet (true/false)
     "show_current_balance": true,
-    // show_received_coins: Determine whether to show the top 100 list of wallet addresses that have the highest total number of coins received based on adding up all received transactions (true/false)
+    // show_received_coins: Determine whether to show the top 1000 list of wallet addresses that have the highest total number of coins received based on adding up all received transactions (true/false)
     "show_received_coins": true,
-    // wealth_distribution: a collection of settings that pertain to the wealth distribution section of the richlist/top100 page
-    //                      This section features a summary table with the breakdown of coins owned by the top 1-25, 26-50, 51-75, 76-100, 101+ wallets and all burned coins plus an associated pie chart
+    // wealth_distribution: a collection of settings that pertain to the wealth distribution section of the richlist/top1000 page
+    //                      This section features a summary table with the breakdown of coins owned by the top 1-10, 11-100, 101-500, 501-1000, 1001+ wallets and all burned coins plus an associated pie chart
     "wealth_distribution": {
-      // show_distribution_table: Show/hide the wealth distribution summary table with the breakdown of coins owned by the top 1-25, 26-50, 51-75, 76-100, 101+ wallets and all burned coins (true/false)
+      // show_distribution_table: Show/hide the wealth distribution summary table with the breakdown of coins owned by the top 1-10, 11-100, 101-500, 501-1000, 1001+ wallets and all burned coins (true/false)
       //                          If set to false, the wealth distribution table will be completely hidden
       "show_distribution_table": true,
-      // show_distribution_chart: Show/hide the wealth distribution pie chart with the breakdown of coins owned by the top 1-25, 26-50, 51-75, 76-100, 101+ wallets and all burned coins (true/false)
+      // show_distribution_chart: Show/hide the wealth distribution pie chart with the breakdown of coins owned by the top 1-10, 11-100, 101-500, 501-1000, 1001+ wallets and all burned coins (true/false)
       //                          If set to false, the wealth distribution pie chart will be completely hidden
       "show_distribution_chart": true,
-      // colors: An array of html color codes to represent the top 100 groupings in the wealth distribution table and pie chart
+      // colors: An array of html color codes to represent the top 1000 groupings in the wealth distribution table and pie chart
       //         From left-to-right the 6 colors are represented as the following: "top 1-10", "top 11-100", "top 101-500", "top 501-1000", "1001+" and "burned coins" - which is used if the include_burned_coins_in_distribution setting is enabled
       "colors": [ "#e73cbd", "#00bc8c", "#3498db", "#e3ce3e", "#adb5bd", "#e74c3c" ]
     },
     // burned_coins: a collection of settings that pertain to the wallet addresses that should not appear in the richlist/top100 page
     //               NOTE: These settings won't take effect until after running (and completing) a normal index sync or reindex-rich
     "burned_coins": {
-      // addresses: An array of wallet addresses to exclude from the richlist/top100 page
+      // addresses: An array of wallet addresses to exclude from the richlist/top1000 page
       //            Use this setting to prevent specific wallet addresses from being displayed in the rich list and wealth distribution chart sections
       //            These wallet addresses will be completely removed from the rich list, but will still be viewable and accessible via the rest of the explorer pages as per normal
       //            Add as many wallet addresses as necessary in the following format: [ "", "" ]
