@@ -324,7 +324,7 @@ html(lang='en')
               }
               showTopPanelData('hashratepanel', 'hashratePanelLoading');
 
-              splitValue = Number(json.lastPrice).toLocaleString('en',{'minimumFractionDigits':10,'maximumFractionDigits':10,'useGrouping':true});
+              splitValue = Number(json.lastPrice).toLocaleString('en',{'minimumFractionDigits':8,'maximumFractionDigits':8,'useGrouping':true});
               splitParts = splitValue.split('.');
               $("#lastPrice").html(splitParts[0] + '.<span class="decimal">' + splitParts[1] + '</span>');
               showTopPanelData('pricepanel', 'pricePanelLoading');
