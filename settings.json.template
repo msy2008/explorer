@@ -10,11 +10,11 @@
   // dbsettings: a collection of settings that allow the explorer to connect to MongoDB
   "dbsettings": {
     // user: The MongoDB username
-    "user": "infinitecoinchain",
+    "user": "dogecoinchain",
     // password: The MongoDB password
     "password": "abcde12345!",
     // database: The MongoDB database name (default: explorerdb)
-    "database": "ifcexplorerdb",
+    "database": "dogeexplorerdb",
     // address: The MongoDB hostname. This should always be 'localhost' if connecting to a local instance, otherwise specify the ip address of a remote instance
     "address": "localhost",
     // port: The port # that MongoDB is configured to listen for requests on (default: 27017)
@@ -26,18 +26,18 @@
     // host: The hostname or ip address of the wallet to connect to (default: localhost)
     "host": "localhost",
     // port: The port # that the wallet is configured to listen for RPC requests on (default: 9322 for Exor wallet)
-    "port": 9322,
+    "port": 22555,
     // username: The wallet RPC username
-    "username": "infinitecoin",
+    "username": "dogecoin",
     // password: The wallet RPC password
-    "password": "infinitecoin123"
+    "password": "dogecoin123"
   },
 
   // webserver: a collection of settings that pertain to the node.js express web framework (read more: https://www.npmjs.com/package/express)
   "webserver": {
     // port: Port # to configure the express webserver to listen for http requests on
     //       NOTE: Be sure to configure firewalls to allow traffic through this port or the explorer website may not be accessible remotely
-    "port": 3001,
+    "port": 3002,
     // tls: a collection of settings that pertain to the TLS (Transport Layer Security) protocol feature (aka: ssl or https)
     "tls": {
       // enabled: Enable/disable TLS
@@ -73,9 +73,9 @@
   "coin": {
     // name: Name of the cryptocurrency coin being explored. This value is displayed in the page header when the "shared_pages.page_header.home_link" setting is set to "coin".
     //       NOTE: This value acts as a unique identifier for data stored in mongo and therefore cannot be changed without re-syncing all existing data.
-    "name": "Infinitecoin",
+    "name": "Dogecoin",
     // symbol: The cryptocurrency coin ticker/symbol value. This value is displayed anywhere that coin data is displayed including the index, address, block, movement, reward, richlist/top100 and tx pages
-    "symbol": "IFC"
+    "symbol": "DOGE"
   },
 
   // network_history: a collection of settings that controls saving of extra historical network data during a block sync
@@ -96,15 +96,15 @@
     //        (see /public/css/themes for available themes)
     "theme": "Cerulean",
     // page_title: The text to display at the end of the HTML title tag and also displayed in the page header when the "shared_pages.page_header.home_link" setting is set to "title"
-    "page_title": "IFC",
+    "page_title": "DOGE",
     // favicon: The path to an icon file that is displayed in a browser window/tab and serves as branding for your website. Its main purpose is to help visitors locate your page easier when they have multiple tabs open
     //          NOTE: The path root is /
-    "favicon": "public/infinitecoin.ico",
+    "favicon": "public/dogecoin.ico",
     // logo: The path to an image file that is displayed on the api page as well as in one of the top panels when enabled
     //       This logo can also be displayed in the header when the "shared_pages.page_header.home_link" setting is set to "logo" and the "shared_pages.page_header.home_link_logo" setting is blank or an invalid file
     //       NOTE: The path root is /public
     //             The optimum logo size is 128x128 as the image will be forced to 128px high when displayed
-    "logo": "/img/infinitecoin.png",
+    "logo": "/img/dogecoin.png",
     // date_time: a collection of settings that pertain to the date and time values displayed in the explorer
     "date_time": {
       // display_format: The format to use when displaying date/time values
@@ -152,7 +152,7 @@
       // home_link_logo: The path to a logo image that is displayed on page header when the "shared_pages.page_header.home_link" setting is set to "logo"
       //                 If the home_link_logo is left blank or not set to a valid file, the "shared_pages.page_header.home_link" = "logo" setting will automatically default to displaying the original "shared_pages.logo" instead of the "shared_pages.page_header.home_link_logo"
       //                 NOTE: The path root is /public
-      "home_link_logo": "/img/infinitecoin.png",
+      "home_link_logo": "/img/dogecoin.png",
       // home_link_logo_height: The max-height value of the "shared_pages.page_header.home_link" logo image (value in px, only valid if "shared_pages.page_header.home_link" = 'logo')
       "home_link_logo_height": 50,
       // panels: a collection of settings that pertain to the panels displayed on page header of all pages (NOTE: you can show/hide the entire group of panels on each page independently by changing the show_panels value in the settings for each page)
@@ -255,7 +255,7 @@
         // image_path: The path to an image file that is displayed in the header section of all pages next to the page title (NOTE: This image can be enabled/disabled on a per-page basis)
         //             NOTE: The path root is /public
         //             The optimum logo size is 48x48 as the image will be forced to this size when displayed
-        "image_path": "/img/infinitecoin.png",
+        "image_path": "/img/dogecoin.png",
         // enable_animation: Enable/disable the flip/spin animation on the page title image (true/false)
         "enable_animation": true
       },
@@ -340,10 +340,10 @@
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
           "enabled": true,
-          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Infinitecoin Github
+          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Dogecoin Github
           "tooltip_text": "Github",
           // url: The exact url that the social link should navigate to
-          "url": "https://github.com/infinitecoin-project/infinitecoin",
+          "url": "https://github.com/dogecoin/dogecoin",
           // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
           "fontawesome_class": "fab fa-github",
           // image_path: The path to an image file that will be displayed for this social link
@@ -354,10 +354,10 @@
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
           "enabled": true,
-          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: msy2008 Twitter
+          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: dogecoin Twitter
           "tooltip_text": "Twitter",
           // url: The exact url that the social link should navigate to
-          "url": "https://twitter.com/msy2008",
+          "url": "https://twitter.com/dogecoin",
           // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
           "fontawesome_class": "fab fa-twitter",
           // image_path: The path to an image file that will be displayed for this social link
@@ -367,7 +367,7 @@
         {
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
-          "enabled": true,
+          "enabled": false,
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Infinitecoin Discord
           "tooltip_text": "Discord",
           // url: The exact url that the social link should navigate to
@@ -381,7 +381,7 @@
         {
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
-          "enabled": true,
+          "enabled": false,
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Infinitecoin Telegram
           "tooltip_text": "Telegram",
           // url: The exact url that the social link should navigate to
@@ -396,10 +396,10 @@
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
           "enabled": true,
-          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Infinitecoin Website
+          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: dogecoin Website
           "tooltip_text": "Website",
           // url: The exact url that the social link should navigate to
-          "url": "https://infinitecoin.com",
+          "url": "https://dogecoin.com",
           // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
           "fontawesome_class": "fas fa-globe",
           // image_path: The path to an image file that will be displayed for this social link
@@ -410,10 +410,10 @@
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
           "enabled": true,
-          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Infinitecoin Coingecko
+          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: dogecoin Coingecko
           "tooltip_text": "Coingecko",
           // url: The exact url that the social link should navigate to
-          "url": "https://www.coingecko.com/en/coins/infinitecoin",
+          "url": "https://www.coingecko.com/en/coins/dogecoin",
           // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
           "fontawesome_class": "",
           // image_path: The path to an image file that will be displayed for this social link
@@ -424,10 +424,10 @@
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
           "enabled": true,
-          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Infinitecoin Coinmarketcap
+          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: dogecoin Coinmarketcap
           "tooltip_text": "Coinmarketcap",
           // url: The exact url that the social link should navigate to
-          "url": "https://coinmarketcap.com/currencies/infinitecoin",
+          "url": "https://coinmarketcap.com/currencies/dogecoin",
           // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
           "fontawesome_class": "",
           // image_path: The path to an image file that will be displayed for this social link
@@ -504,7 +504,7 @@
     // genesis_block: Your coins genesis block hash is used to determine the beginning of the blockchain
     //                For many bitcoin clones you can use the following cmd to get the block hash of the genesis block: coin-cli getblockhash 0
     //                NOTE: If this value is not entered correctly it will not be possible for the explorer to find or navigate to the genesis block, neither via block or transaction hash
-    "genesis_block": "b10d5e83a5b2e62d9d872096bc20cae1a276ae6aacc02a71a5832b1fc9aeff85"
+    "genesis_block": "1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"
   },
 
   // transaction_page: a collection of settings that pertain to the transaction/tx page
@@ -525,9 +525,9 @@
       "show_description": true
     },
     // genesis_tx: Your coins genesis transaction hash is used to determine the beginning of the blockchain
-    //             For many bitcoin clones you can use the following cmd to find the list of transaction hashes from the genesis block: coin-cli getblock b10d5e83a5b2e62d9d872096bc20cae1a276ae6aacc02a71a5832b1fc9aeff85
+    //             For many bitcoin clones you can use the following cmd to find the list of transaction hashes from the genesis block: coin-cli getblock 1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691
     //             NOTE: If this value is not entered correctly it will not be possible for the explorer to find or navigate to the genesis block by searching for the genesis transaction hash
-    "genesis_tx": "87605f6741961e869237b3d78fb271cdca70c67f1bb876992fda97ccd9036220",
+    "genesis_tx": "5b2a3f53f605d62c53e62932dac6925e3d74afa5a4b459745c36d42d0ed26a69",
     // show_op_return: Determine whether to decode and show OP_RETURN values that may have been embeddeded in a transaction
     //                 NOTE: Enabling this option will require a full reindex of the blockchain data before previously synced transactions can display the OP_RETURN value
     "show_op_return": false
@@ -822,12 +822,12 @@
       "bittrex": {
         // enabled: Enable/disable the bittrex exchange (true/false)
         //          If set to false, the bittrex page will be completely inaccessible and no market data will be downloaded for this exchange
-        "enabled": false,
+        "enabled": true,
         // trading_pairs: An array of market trading pair symbols
         //                You can add as many trading pairs as necessary
         //                All entries must specify your coins symbol as it is displayed on the exchange, followed by a slash (/) and ending with the symbol of the market or asset that is being traded against
         //                Ex: "LTC/BTC", "LTC/USDT", "LTC/ETH"
-        "trading_pairs": [ "LTC/BTC" ]
+        "trading_pairs": [ "DOGE/BTC" , "DOGE/USDT"]
       },
       // bleutrade: a collection of settings that pertain to the bleutrade exchange
       "bleutrade": {
@@ -844,12 +844,12 @@
       "crex": {
         // enabled: Enable/disable the crex exchange (true/false)
         //          If set to false, the crex page will be completely inaccessible and no market data will be downloaded for this exchange
-        "enabled": true,
+        "enabled": false,
         // trading_pairs: An array of market trading pair symbols
         //                You can add as many trading pairs as necessary
         //                All entries must specify your coins symbol as it is displayed on the exchange, followed by a slash (/) and ending with the symbol of the market or asset that is being traded against
         //                Ex: "LTC/BTC", "IFC/BTC", "DOGE/BTC"
-        "trading_pairs": [ "IFC/BTC" ]
+        "trading_pairs": [ "DOGE/BTC" ]
       },
       // poloniex: a collection of settings that pertain to the poloniex exchange
       "poloniex": {
@@ -904,9 +904,9 @@
     "default_exchange": {
       // exchange_name: The name of the default exchange must exactly match the name of an exchange in the "exchanges" setting above
       //                See the list of supported exchanges above for the list of supported exchange names
-      "exchange_name": "crex",
+      "exchange_name": "bittrex",
       // trading_pair: The name of the trading pair for the default exchange must exactly match the name of a trading pair from the "exchanges" setting above
-      "trading_pair": "IFC/BTC"
+      "trading_pair": "DOGE/BTC"
     }
   },
 
@@ -936,18 +936,18 @@
     "sample_data": {
       // blockindex: This value can be any valid block height number from your coins blockchain
       //             NOTE: This value is only used to build example api links on the api page from the /api/getblockhash api for example
-      "blockindex": 3974399,
+      "blockindex": 512800,
       // blockhash: This value can be any valid block hash from your coins blockchain
-      //            For many bitcoin clones you can use the following cmd to get the block hash for a given block height: coin-cli getblockhash 3974399
+      //            For many bitcoin clones you can use the following cmd to get the block hash for a given block height: coin-cli getblockhash 512800
       //            NOTE: This value is only used to build example api links on the api page from the /api/getblock api for example
-      "blockhash": "509e9adb6a96a04986d1fb853eb91e07fd8914dc7b683d936b84f0437b3e5fd3",
+      "blockhash": "431d056787126db7da580441ae77dad0e5590caaef6431682e0ca8e5470fdec7",
       // txhash: This value can be any valid transaction hash from your coins blockchain
-      //         For many bitcoin clones you can use the following cmd to find a list of tx hashes for a given block hash: coin-cli getblock 509e9adb6a96a04986d1fb853eb91e07fd8914dc7b683d936b84f0437b3e5fd3
+      //         For many bitcoin clones you can use the following cmd to find a list of tx hashes for a given block hash: coin-cli getblock 431d056787126db7da580441ae77dad0e5590caaef6431682e0ca8e5470fdec7
       //         NOTE: This value is only used to build example api links on the api page from the /api/getrawtransaction api for example
-      "txhash": "ca13a46ff7586dde470f305cf81a8fc65946b0ceb171fd26904ce3f84bf210cd",
+      "txhash": "96a95b84b45f506508997c741eab2a13e3eb7ce70ac8d41befc47d3a9079fef1",
       // address: This value can be any valid wallet address from your coins blockchain that has received at least 1 or more coin transactions
       //          NOTE: This value is only used to build example api links on the api page from the /ext/getaddress api for example
-      "address": "iNMgMuFVorrnt36cDZXoJSMHvkca2f75TF"
+      "address": "D7vbaVBAMwEmbsMKAdgYELnaR3H8FM3ZvF"
     },
     // public_apis: a collection of settings that pertain to the public api command system
     //              NOTE: Disabling any of these apis will remove the api definition from the api page and will return a "This method is disabled" msg if the api endpoint is called.
