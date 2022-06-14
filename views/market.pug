@@ -335,7 +335,7 @@ block content
                     if buy.total != null
                       - var total = Number(buy.total).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
                     else
-                      - var total = Number(parseFloat(buy.price).toFixed(10) * parseFloat(buy.quantity).toFixed(10)).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':10,'useGrouping':true});
+                      - var total = Number(parseFloat(buy.price).toFixed(10) * parseFloat(buy.quantity).toFixed(10)).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
                     - var splitTotal = total.split(".");
                     tr
                       td.text-center.text-success.fw-bold #{splitPrice[0]}.
@@ -368,7 +368,7 @@ block content
                     if sell.total != null
                       - var total = Number(sell.total).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
                     else
-                      - var total = Number(parseFloat(sell.price).toFixed(10) * parseFloat(sell.quantity).toFixed(10)).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':10,'useGrouping':true});
+                      - var total = Number(parseFloat(sell.price).toFixed(10) * parseFloat(sell.quantity).toFixed(10)).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
                     - var splitTotal = total.split(".");
                     tr
                       td.text-center.text-danger.fw-bold #{splitPrice[0]}.
@@ -404,7 +404,7 @@ block content
                       if order.total != null
                         - var total = Number(order.total).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
                       else
-                        - var total = Number(parseFloat(order.price).toFixed(10) * parseFloat(order.quantity).toFixed(10)).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':10,'useGrouping':true});
+                        - var total = Number(parseFloat(order.price).toFixed(10) * parseFloat(order.quantity).toFixed(10)).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
                       - var splitTotal = total.split(".");
                       if order.ordertype.toUpperCase() == 'BUY'
                         tr
