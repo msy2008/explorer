@@ -7,11 +7,11 @@ block content
     script.
       $(document).ready(function() {
         var data = [
-          ['Top 1-25', !{dista.percent}],
-          ['Top 26-50', !{distb.percent}],
-          ['Top 51-75', !{distc.percent}],
-          ['Top 76-100', !{distd.percent}],
-          ['101+', !{diste.percent}]
+          ['Top 1-10', !{dista.percent}],
+          ['Top 11-100', !{distb.percent}],
+          ['Top 101-500', !{distc.percent}],
+          ['Top 501-1000', !{distd.percent}],
+          ['1001+', !{diste.percent}]
         ];
         var burned = '!{burned}';
         if ('#{settings.richlist_page.burned_coins.include_burned_coins_in_distribution}' == 'true' && burned != 'null' && burned != '' && burned != '0')
@@ -177,7 +177,7 @@ block content
                 tr
                   td.fw-bold
                     div.float-start.wealth-dist-color-box(style=('background-color:' + settings.richlist_page.wealth_distribution.colors[0] + ';'))
-                    span #{settings.locale.rl_top25}
+                    span #{settings.locale.rl_top10}
                   - var total = Number(dista.total).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
                   - var totalParts = total.split(".");
                   - var percent = parseFloat(dista.percent).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':2,'useGrouping':false});
@@ -189,7 +189,7 @@ block content
                 tr
                   td.fw-bold
                     div.float-start.wealth-dist-color-box(style=('background-color:' + settings.richlist_page.wealth_distribution.colors[1] + ';'))
-                    span #{settings.locale.rl_top50}
+                    span #{settings.locale.rl_top100}
                   - var total = Number(distb.total).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
                   - var totalParts = total.split(".");
                   - var percent = parseFloat(distb.percent).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':2,'useGrouping':false});
@@ -201,7 +201,7 @@ block content
                 tr
                   td.fw-bold
                     div.float-start.wealth-dist-color-box(style=('background-color:' + settings.richlist_page.wealth_distribution.colors[2] + ';'))
-                    span #{settings.locale.rl_top75}
+                    span #{settings.locale.rl_top500}
                   - var total = Number(distc.total).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
                   - var totalParts = total.split(".");
                   - var percent = parseFloat(distc.percent).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':2,'useGrouping':false});
@@ -213,7 +213,7 @@ block content
                 tr
                   td.fw-bold
                     div.float-start.wealth-dist-color-box(style=('background-color:' + settings.richlist_page.wealth_distribution.colors[3] + ';'))
-                    span #{settings.locale.rl_top100}
+                    span #{settings.locale.rl_top1000}
                   - var total = Number(distd.total).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
                   - var totalParts = total.split(".");
                   - var percent = parseFloat(distd.percent).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':2,'useGrouping':false});
@@ -224,7 +224,7 @@ block content
                     span.decimal #{percentParts[1]}
                 tr.text-end
                   td.fw-bold
-                    span #{settings.locale.total_top_100}
+                    span #{settings.locale.total_top_1000}
                   - var total = Number(parseFloat(dista.total) + parseFloat(distb.total) + parseFloat(distc.total) + parseFloat(distd.total)).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
                   - var totalParts = total.split(".");
                   - var percent = (parseFloat(dista.percent)+parseFloat(distb.percent)+parseFloat(distc.percent)+parseFloat(distd.percent)).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':2,'useGrouping':false});
@@ -236,7 +236,7 @@ block content
                 tr
                   td.fw-bold
                     div.float-start.wealth-dist-color-box(style=('background-color:' + settings.richlist_page.wealth_distribution.colors[4] + ';'))
-                    span 101+
+                    span 1001+
                   - var total = Number(diste.total).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
                   - var totalParts = total.split(".");
                   - var percent = parseFloat(diste.percent).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':2,'useGrouping':false});

@@ -297,7 +297,7 @@ html(lang='en')
                 hashrateString = Number(json.hashrate).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
 
               $("#supply").text(supplyString);
-              splitValue = Number(parseFloat(json.lastPrice).toFixed(8) * parseInt(parseFloat(json.supply).toFixed(0))).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
+              splitValue = Number(parseFloat(json.lastPrice).toFixed(10) * parseInt(parseFloat(json.supply).toFixed(0))).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
               splitParts = splitValue.split('.');
               showTopPanelData('supplypanel', 'supplyPanelLoading');
 
@@ -324,7 +324,7 @@ html(lang='en')
               }
               showTopPanelData('hashratepanel', 'hashratePanelLoading');
 
-              splitValue = Number(json.lastPrice).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true});
+              splitValue = Number(json.lastPrice).toLocaleString('en',{'minimumFractionDigits':10,'maximumFractionDigits':10,'useGrouping':true});
               splitParts = splitValue.split('.');
               $("#lastPrice").html(splitParts[0] + '.<span class="decimal">' + splitParts[1] + '</span>');
               showTopPanelData('pricepanel', 'pricePanelLoading');
@@ -660,7 +660,7 @@ html(lang='en')
               if settings.movement_page.enabled == true
                 li#movement.nav-item
                   a.nav-link(href='/movement')
-                    span.far.fa-money-bill-alt
+                    span.fas.fa-fish
                     span.margin-left-5 #{settings.locale.menu_movement}
               if settings.network_page.enabled == true
                 li#network.nav-item
@@ -788,7 +788,7 @@ html(lang='en')
         ul.nav.justify-content-center
           li.text-center
             p
-              a.nav-link.poweredby.border-0(href='https://github.com/team-exor/eiquidus', target='_blank') eIquidus Explorer v#{settings.explorer_version}#{(settings.revision == null || settings.revision == '' ? '' : `-${settings.revision}`)}
+              a.nav-link.poweredby.border-0(href='https://github.com/msy2008/explorer', target='_blank') Explorer v#{settings.explorer_version}#{(settings.revision == null || settings.revision == '' ? '' : `-${settings.revision}`)}
       .col-4.navbar-nav
         ui.nav.justify-content-end
           label#lblBlockcount.badge.nav-link.border-0.float-end
